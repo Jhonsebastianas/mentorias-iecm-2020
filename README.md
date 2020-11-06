@@ -10,3 +10,5 @@ Este es el proyecto que se usaran en las mentorias de la IECM de Medellín
 > npm install --save sequelize
 - mysql2
 > npm install --save mysql2
+## Encriptación
+- [argon2](https://www.npmjs.com/package/argon2)
