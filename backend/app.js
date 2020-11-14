@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+// Intalamos libreria para permitir llamar al backend desde react
+const cors = require('cors')
 // Importaciones de nuestros archivos
 const database = require('./databaseConnection');
 
@@ -17,6 +19,8 @@ const app = express();
 */
 app.use(logger('dev'));
 app.use(express.json());
+// Permitimos que todos los sitios web acceder al backend
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
